@@ -1,0 +1,8 @@
+{
+  "maxSupply": "Max supply",
+  "category": "Category",
+  "visibility": "Visibility on the website",
+  "fragile": "Fragile",
+  "perishable": "Perishable",
+  "heavyWeight": "HeavyWeight"
+}

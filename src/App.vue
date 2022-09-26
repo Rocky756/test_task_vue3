@@ -1,11 +1,15 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <suspense>
+      <router-view></router-view>
+    </suspense>
+  </div>
 </template>
-
+<script>
+  export default {
+    name: 'App',
+  };
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -14,17 +18,50 @@
   text-align: center;
   color: #2c3e50;
 }
+body {
+  width: 100vw;
+  height: 100vh;
+}
 
-nav {
-  padding: 30px;
+li {
+  list-style-type: none;
+  text-align: start;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.container {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pointer {
+  cursor: pointer;
+}
+.add-btn {
+  border-radius: 6px !important;
+  margin-left: 20vw;
+}
+.back-btn {
+  background-color: rgb(228, 228, 228) !important;
+  border: 1px solid rgb(67, 67, 67) !important;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.back-btn:hover {
+  color: black !important;
+  background-color: rgb(169, 169, 169) !important;
+}
+.weight {
+  font-weight: 700;
+}
+.margin-bottom {
+  margin-bottom: 20px !important;
+}
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  // align-items: flex-start;
 }
 </style>
